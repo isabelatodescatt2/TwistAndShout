@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Twist And Shout</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Coluna da Esquerda -->
+        <div class="primeiraColuna">
+            <img src="imagens/logo.png" alt="Logo Twist and Shout">
+        </div>
+
+        <!-- Coluna da Direita -->
+        <div class="segundaColuna">
+            <p class="loginTexto">LOGIN</p>
+            <button class="google">
+                <img src="imagens/google.png" alt="Google" style="width: 20px; vertical-align: middle;">
+                <span>Entrar com Google</span>
+            </button>
+            <p class="or">― OU ENTRE COM EMAIL ―</p>
+
+            <div class="inputs">
+                <input 
+                    style="font-family: 'Inter', sans-serif;" 
+                    class='espacinho' type="email" placeholder="Seu Email"
+                    id="email"
+                >
+                <input 
+                    style="font-family: 'Inter', sans-serif;" 
+                    class='espacinho' type="password" placeholder="Sua Senha"
+                    id="senha"
+                >
+            </div>
+
+            <div class="ajustarSpace">
+                <div class="checkboxEEsqueceu">
+                    <label>
+                        <input type="checkbox"> Mantenha-me conectado
+                    </label>
+                    <a href="#"><u>Esqueci a senha</u></a>
+                </div>
+            </div>
+
+
+            <button class="botao" id="botao" onclick="login()">Entrar</button>
+            <p class ="criarconta">Não tem uma conta? <a href="#"><u>Crie uma</u></a></p>
+        </div>
+    </div>
+</body>
+</html>

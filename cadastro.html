@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Twist And Shout</title>
+    <link rel="stylesheet" href="cadastro.css">
+   
+</head>
+<body>
+    
+    <div class="voltar">
+        <img class="arrow" src="imagens/arrow.png" onclick="VoltarForm()">
+    </div>
+
+
+    <div class="container">
+        <p class="criar">CRIE SUA CONTA</p>
+
+        <div class="cadastro">
+            <div class="cadastro">
+                <label style="font-family: 'Inter', sans-serif;" for="username">
+                    Username
+                </label>
+                <input class='espacinho' type="text" id="username" name="username" placeholder="Crie seu username">
+<br>
+                <label style="font-family: 'Inter', sans-serif;" for="emailoutelefone">
+                    Email ou Telefone
+                </label>
+                <input class='espacinho' type="email" or type="tel" id="emailoutelefone" name="emailoutelefone" placeholder="Digite seu email ou telefone">
+<br>
+                <label style="font-family: 'Inter', sans-serif;" for="senha">
+                    Senha
+                </label>
+                <input class='espacinho' type="password" id="senha" name="senha" placeholder="Crie sua senha">
+<br>
+                <label style="font-family: 'Inter', sans-serif;" for="confirmarsenha">
+                    Confirme sua senha
+                </label>
+                <input class='espacinho' type="password" id="confirmarsenha" name="confirmarsenha" placeholder="Sua senha">
+                <button class="botao" id="Botao" onclick="cadastro()">
+                    <p style="font-family: 'Inter', sans-serif;" class="criarconta">Criar conta</p>
+                </button>
+               
+            </div>
+<br>    
+            <p style="font-family: 'Inter', sans-serif;" class = 'termos'>Ao criar esta conta, eu confirmo que li e concordo com os <u>Termos e Condições</u> desta plataforma, 
+                incluindo a política de privacidade e os requisitos de uso. Eu entendo e aceito todos os termos descritos</p>
+                <center>
+                    <div class="botaotermos" id="myBotao" onclick="abrirModal()">Termos e condições</div>
+                </center>
+
+                <br>
+
+            <p style="font-family: 'Inter', sans-serif;" class="entrar">Já tem uma conta? <u>Entre</u></p>
+    </div>
+    
+    <div class="janelinha-modal" id="janelinha-modal">
+        
+        <div class="modal">
+
+            <button class="fechar" id="fechar" onclick="fecharModal()">&#10060;</button>
+            <center>
+                <h1>Bem-vindo à Anne Viagens -  Aproveite nossos pacotes com preços incríveis! </h1>
+
+            </center>
+            
+
+            <br><br>
+            <center>
+            <p>   <li>Roteiro Histórico: 3 dias em Cantenbury + Tour pela Catedral a partir de R$ 1.299. </li> 
+                <br>
+                <li>  Aventura no Countryside: 5 dias explorando os campos de Cantenbury e castelos, a partir de R$ 1.999.</li>
+               <br>
+                <li>Experiência Completa: 7 dias com tudo incluso, hospedagem 5 estrelas e passeios exclusivos por R$ 3.499. </li>
+                <br>
+               <p>  Se você busca uma viagem imersiva, onde história e tranquilidade se encontram, este é o destino perfeito.</p>
+                </center>
+
+        </div>
+
+    </div>
+
+    <script src="cadastro.js"></script> 
+
+</body>
+</html>

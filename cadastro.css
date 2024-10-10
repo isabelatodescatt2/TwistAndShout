@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Molen';
+    src: url("fonts/molen-surplus.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("fonts/Inter-Regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterThin';
+    src: url("fonts/Inter-Thin-BETA.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url("fonts/Inter-Medium.woff") format('woff');
+    font-weight: normal;
+}
+
+body {
+    background-color: #E5D5CE;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 900px; 
+}
+
+.criar {
+    font-family: 'Molen';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: #ffffff;
+    text-shadow: #000000 3px 3px;
+    margin-top: 55px;
+}
+
+.container {
+    background-color: #6D2626;
+    border-radius: 46px;
+    justify-content: center;
+    align-items: center;
+    height: 706px;
+    width: 1163px;
+    margin: 0 auto;
+}
+
+.cadastro {
+    margin-top: -20px;
+    margin-left: 185px;
+    margin-right: 200px;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    height: 50px;
+    display: flex;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    margin: 1%;
+}
+label {
+    font-size: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    border-radius: 13px;
+}
+
+.espacinho {
+    border-radius: 8px;
+    width: 400px;
+    border: none;
+    height: 40px; 
+    padding: 10px; 
+}
+
+::placeholder {
+    color: #D6D6D6;
+    padding-left: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'InterThin';
+}
+
+.termos {
+    font-family: 'InterThin';
+    color: #EBDED8;
+    margin-top: 270px;
+    margin-right: 175px;
+    margin-left: 190px;
+    font-size: 10px;
+    justify-content: justify;
+    font-weight: 10;
+}
+
+.botaotermos {
+    font-family: 'Cormorant Garamond', serif;
+    padding: 7px 10px;
+    background: #cfc0c0;
+    border-radius: 30px;
+    color: rgb(85, 7, 7);
+    margin-top: 20px; /* Altere a margem se necessário */
+    display: inline-block; /* ou flex se quiser mais controle */
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Remova position absolute */
+    /* Remova top, left e transform */
+    border: none;
+    text-align: center;
+}
+
+
+.botao {
+    color: #EBDED8;
+    font-size: 14px;
+    background-color: #362222;
+    border: none;
+    height: 860px;
+    margin-top: 30px;
+    width: 420px;
+    cursor: pointer;
+}
+
+.criarconta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Inter';
+    margin-top: 5px;
+    margin-bottom: 5px;  
+    height: 25px;
+    text-align: center;
+}
+
+.entrar {
+    font-family: 'Inter';
+    font-size: 14px;
+    color: #EBDED8;
+    margin-top: 20px;
+    margin-right: 175px;
+    margin-left: 310px;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.entrar {
+    font-family: 'Inter';
+    font-size: 14px;
+    color: #EBDED8;
+    margin-top: 20px;
+    margin-right: 175px;
+    margin-left: 310px;
+    font-size: 14px;
+    justify-content: center;
+}
+
+
+.janelinha-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.869); 
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    display: none;
+}
+
+.modal {
+    width: 70%;
+    min-width: 600px;
+    min-height: 200px;
+    background-image: url('sua-imagem-no-modal.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 20px;
+    color: #fff; 
+    overflow-x: hidden;
+    
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.janelinha-modal.abrir {
+    display: flex;
+}
