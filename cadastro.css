@@ -214,3 +214,7 @@ label {
 .janelinha-modal.abrir {
     display: flex;
 }
+
+u {
+    cursor: pointer;
+}
