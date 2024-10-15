@@ -44,8 +44,14 @@
                
             </div>
 <br>    
-            <p style="font-family: 'Inter', sans-serif;" class = 'termos'>Ao criar esta conta, eu confirmo que li e concordo com os <u onclick="abrirModal()">Termos e Condições</u> desta plataforma, 
+           <input type="checkbox" id="check" name="check" value="check"> <p style="font-family: 'Inter', sans-serif;" class = 'termos' >     Ao criar esta conta, eu confirmo que li e concordo com os <span class="condicoes" id="modal" >Termos e Condições</span> desta plataforma, 
                 incluindo a política de privacidade e os requisitos de uso. Eu entendo e aceito todos os termos descritos</p>
+
+                <center>
+                    <div class="botaotermos" id="myBotao" onclick="abrirModal()">Termos e condições</div>
+                </center>
+
+                <br>
 
             <p style="font-family: 'Inter', sans-serif;" class="entrar">Já tem uma conta? <u>Entre</u></p>
     </div>
@@ -54,24 +60,72 @@
         
         <div class="modal">
 
-            <button class="fechar" id="fechar" onclick="fecharModal()">&#10060;</button>
+            <button class="fechar" id="fechar" onclick="fecharModal()">X</button>
             <center>
-                <h1>Bem-vindo à Anne Viagens -  Aproveite nossos pacotes com preços incríveis! </h1>
+                <h1>Termos e Condições de Uso</h1>
 
             </center>
             
-
             <center>
-            <p>   <li>Roteiro Histórico: 3 dias em Cantenbury + Tour pela Catedral a partir de R$ 1.299. </li> 
-                <li>  Aventura no Countryside: 5 dias explorando os campos de Cantenbury e castelos, a partir de R$ 1.999.</li>
-                <li>Experiência Completa: 7 dias com tudo incluso, hospedagem 5 estrelas e passeios exclusivos por R$ 3.499. </li>
-               <p>  Se você busca uma viagem imersiva, onde história e tranquilidade se encontram, este é o destino perfeito.</p>
+            <p> 
+                <br> <p>Bem-vindo ao Twist and Shout! Estes Termos e Condições regem o uso do nosso site, nossos serviços e produtos. Ao acessar e utilizar o site Twist and Shout (o "Site"), você concorda em cumprir e se submeter a estes Termos. Leia-os atentamente antes de prosseguir com a navegação ou compra de qualquer produto.
+
+               <li> 1. Aceitação dos Termos</li>
+                
+               <p> Ao utilizar o Site, você declara que tem, no mínimo, 18 anos de idade ou que possui o consentimento legal de um responsável. Ao clicar em "Concordo" ou ao continuar a navegar no site, você aceita integralmente os Termos e Condições aqui descritos, comprometendo-se a respeitar todas as disposições.</p>
+                
+               <li> 2. Serviços Oferecidos </li>
+               
+                <p>O Twist and Shout oferece uma ampla variedade de itens vintage e de colecionadores. Nossa missão é fornecer aos clientes produtos exclusivos, com curadoria especial para garantir autenticidade e qualidade. Reservamo-nos o direito de modificar ou descontinuar, a qualquer momento, qualquer parte dos serviços oferecidos, sem aviso prévio. Isso pode incluir alterações no catálogo de produtos, nos preços ou nas formas de pagamento.                </p>
+                
+                <LI>3. Cadastro e Conta de Usuário</LI>                                   
+    
+                <P>                Para realizar compras em nosso Site, você deverá criar uma conta fornecendo informações pessoais e verídicas. Você é inteiramente responsável por manter a confidencialidade de sua conta e senha, bem como por todas as atividades que ocorram sob seu nome de usuário. Qualquer uso não autorizado de sua conta deve ser imediatamente notificado à equipe do Twist and Shout. Nós não nos responsabilizamos por danos ou perdas decorrentes do uso indevido da sua conta.       </P>
+
+            
+                <li>                4. Produtos e Preços                </li>
+                
+                    <p>                Os produtos disponíveis no Twist and Shout são descritos com a maior precisão possível. No entanto, não garantimos que as descrições ou outras informações de produto sejam 100% precisas, completas, confiáveis ou livres de erros. As imagens são meramente ilustrativas e podem não refletir fielmente o produto. Os preços podem ser alterados sem aviso prévio e o Twist and Shout se reserva o direito de corrigir eventuais erros de preços.
+                    </p>
+
+                <li>                5. Política de Pagamento
+                </li>
+                
+                <p>                O Twist and Shout aceita diversas formas de pagamento, incluindo cartões de crédito, débito e transferências bancárias, que serão especificadas no momento da compra. A aprovação da transação está sujeita à verificação pela instituição financeira responsável. Reservamo-nos o direito de recusar ou cancelar qualquer pedido, a nosso exclusivo critério, especialmente se houver suspeitas de fraude ou uso não autorizado de métodos de pagamento.
+                </p>
+                
+                <li>                6. Política de Entrega
+
+                 </li>                
+                  
+                 <p>                As entregas são realizadas no endereço fornecido pelo cliente no ato da compra. O prazo de entrega pode variar de acordo com a localização e a modalidade de envio escolhida. O Twist and Shout não se responsabiliza por atrasos decorrentes de fatores externos, como greves, desastres naturais ou qualquer evento fora do nosso controle. O cliente é responsável por garantir que o endereço de entrega esteja correto e atualizado.
+                </p>
+                
+                <li>
+                    7. Trocas e Devoluções
+
+                </li>
+                
+                <p>                Se você não estiver satisfeito com sua compra, aceitamos devoluções no prazo de 30 dias a partir da data de recebimento. O produto deve estar em sua embalagem original, sem sinais de uso. Itens danificados devido ao mau uso ou desgaste normal não serão aceitos para troca ou devolução. Em caso de produtos com defeito de fabricação, nós arcaremos com os custos de devolução e enviaremos um novo produto, conforme disponibilidade.
+                </p>                
+
+                <!-- 
+                 8. Propriedade Intelectual
+                 Todo o conteúdo exibido no Twist and Shout, incluindo, mas não se limitando a textos, gráficos, logotipos, ícones, imagens, vídeos e software, é de nossa propriedade ou de nossos licenciadores e é protegido por leis de direitos autorais e marcas registradas. 
+                  Você não está autorizado a copiar, modificar, reproduzir, distribuir ou usar qualquer parte deste conteúdo sem a permissão expressa do Twist and Shout.
+                -->
+
+                <!-- 
+                  9. Limitação de Responsabilidade
+                  Em hipótese alguma o Twist and Shout, seus diretores, funcionários ou fornecedores serão responsáveis por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes do uso ou da incapacidade de usar o Site, serviços ou produtos.
+                 Isso inclui, mas não se limita a, perdas de dados, lucros cessantes ou interrupções de negócios, mesmo que o Twist and Shout tenha sido previamente informado da possibilidade desses danos.
+                -->
+
                 </center>
 
         </div>
 
     </div>
-
     <script src="cadastro.js"></script> 
 
 </body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Twist And Shout</title>
+    <link rel="stylesheet" href="recuperarSenha.css">
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- Coluna da Esquerda -->
+        <div class="primeiraColuna">
+            <img src="imagens/logo.png" alt="Logo Twist and Shout">
+            <p class="recupere">RECUPERE SUA SENHA</p>
+            <p class ="preocupe">Não se preocupe. Iremos resetar sua senha e enviar um link para criar uma nova. </p>
+
+            <div class="inputs">
+                <input 
+                    style="font-family: 'Inter', sans-serif;" 
+                    class='espacinho' type="email" placeholder="Seu Email ou telefone"
+                    id="contato"
+                >
+            </div>
+
+            <button class="botao" id="botao" onclick="enviarEmail()">Enviar Email/SMS</button>
+
+            <p class ="textoPequeno">Não recebeu? <u onclick="enviarEmail()">Reenviar Email/SMS </u></p>
+    
+        </div>
+
+
+        <!-- Coluna da Direita -->
+        <div class="segundaColuna">
+            <img src="imagens/disco.png" alt="disco">
+        </div>
+    </div>
+</body>
+</html>
