@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <div class="navBar">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo Twist and Shout">
+        </div>
+        <div class="barraPesquisa">
+                <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
+        </div>
+        <div class="iconesNavBar">
+            <img src="imagens/profileSymbol.png" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" alt="Menu" onclick="Menu()">
+        </div>
+    </div>
+
+    <!-- CONTAINER VERMELHO -->
+        <!-- ESQUERDA -->
+        <div class="containerEsquerdo">
+            <input type="file" id="uploadImageProduct" accept="image/*" required>
+            <label for="uploadImageProduct">Escolha um arquivo ou arraste e solte-o aqui</label>
+            <p>Recomenda-se o uso de arquivos de alta qualidade no formato.jpg com menos de 20 MB.</p>
+        </div>
+
+        <!-- DIREITA -->
+        <div class="containerDireito">
+            <label for="nomeProduto">Nome</label>
+            <input class='infos' type="text" name="nomeProduto" id="nomeProduto" placeholder="Adicione um nome" required>
+
+            <label for="preco">Preço</label>
+            <label for="preco" class="R$">R$</label>
+            <input type="number" id="preco" placeholder="0,00" required>
+
+            <select name="categoria" id="categoria" required>
+                <option value="" disabled selected>Escolha uma categoria</option>
+                <option value="vinil">Disco de Vinil</option>
+                <option value="cd">CD's</option>
+                <option value="dvd">DVD's</option>
+                <option value="acessorios">Acessórios</option>
+                <option value="livros">Livros</option>
+                <option value="posters">Posters</option>
+            </select>
+
+            <label for="descricaoProduto">Descrição</label>
+            <input type="text" name="descricaoProduto" id="descricaoProduto" placeholder="Adicione uma descrição do produto" required>
+
+            <button onclick="cadastrarProduto()"></button>
+        </div>
+
+    
+</body>
+</html>
