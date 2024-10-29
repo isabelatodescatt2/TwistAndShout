@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar</title>
+    <link rel="stylesheet" href="cadastroProduto.css">
 </head>
 <body>
 
@@ -17,13 +18,14 @@
                 <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
         </div>
         <div class="iconesNavBar">
-            <img src="imagens/profileSymbol.png" alt="Entrar" onclick="Entrar()">
-            <img src="imagens/cartSymbol.png" alt="Carrinho" onclick="CarrinhoCompras()">
-            <img src="imagens/menuSymbol.png" alt="Menu" onclick="Menu()">
+            <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" id="cartSymbol" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" id="menuSymbol" alt="Menu" onclick="Menu()">
         </div>
     </div>
 
     <!-- CONTAINER VERMELHO -->
+     <div class="containerGeral">
         <!-- ESQUERDA -->
         <div class="containerEsquerdo">
             <input type="file" id="uploadImageProduct" accept="image/*" required>
@@ -55,7 +57,7 @@
 
             <button onclick="cadastrarProduto()"></button>
         </div>
-
+    </div>
     
 </body>
 </html>

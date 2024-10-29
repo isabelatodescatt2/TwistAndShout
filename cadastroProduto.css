@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'Molen';
+    src: url("fonts/molen-surplus.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("fonts/Inter-Regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterThin';
+    src: url("fonts/Inter-Thin-BETA.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url("fonts/Inter-Medium.woff") format('woff');
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Inter';
+    background-color: #E5D5CE;
+}
+
+.navBar {
+    background-color: #F5F5F5;
+    margin-top: -8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+
+    .logo {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        img{
+            margin-left: 60%;
+            max-width: 100px;
+            height: auto;
+            
+        }
+    }
+
+    .barraPesquisa {
+        margin-top: 1.8%;
+        input {
+            width: 1000px;
+            padding: 14px;
+            border: #8C695D 2px solid;
+            border-radius: 13px;
+            background-color: #F5F5F5;
+        }
+        input:focus {
+            border: #8C695D 2px solid;
+            outline: none;
+        }
+        
+        ::placeholder {
+            color: #D6D6D6;
+            padding-left: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'InterThin';
+            letter-spacing: 1px;
+        }   
+    }
+
+    .iconesNavBar {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        align-items: center;
+
+        #profileSymbol{
+            margin-left: 25px;
+            max-width: 37px;
+        }
+        #cartSymbol{
+            margin-left: 20px;
+            max-width: 40px;
+        }
+        #menuSymbol{
+            margin-left: 30px;
+            max-width: 10px;
+            margin-right: 35px;
+        }
+
+    }
+
+}
+
+/* Container Principal */
+.containerGeral {
+    margin-left: 13%;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    max-width: 1364px;
+    width: 100%;
+    height: 738px;
+    background-color: #6D2626;
+    border-radius: 46px;
+    font-family: 'InterThin';
+    letter-spacing: 1px;
+}
+
+/* Coluna da Esquerda */
+.containerEsquerdo {
+    margin-left: 3%;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 90%;
+    border-radius: 44px;
+    font-size: 16px;
+
+    input {
+        margin-top: 52%;
+    }
+
+    label {
+        color: #C4C4C4;
+        margin-top: 2%;
+        margin-left: 15%;
+        width: 219px;
+        height: 14px;
+    }
+
+    p{
+        text-align: center;
+        color: #C4C4C4;
+        margin-top: 40%;
+        width: 368px;
+        height: 43px;
+    }
+}
+
+.primeiraColuna img {
+    max-width: 65%;
+    height: auto;
+}
+
+/* Coluna da Direita */
+.containerDireito {
+    color: white;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    label {
+        color: #fff;
+        font-size: 14px;
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .infos {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 14px;
+        font-family: 'InterThin';
+        letter-spacing: 1px;
+
+        #categoria {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            font-family: 'InterThin';
+            letter-spacing: 1px;
+            width: 100%;
+        }
+    }
+
+    button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-family: 'InterThin';
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    input {
+        color: #C4C4C4;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        font-family: 'InterThin';
+        letter-spacing: 1px;
+    }
+}

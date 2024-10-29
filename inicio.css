@@ -41,15 +41,17 @@ body {
     height: 120px;
     width: 100%;
         .logo {
+            flex-basis: 25%;
             img{
-                margin-left: 65%;
-                width: 65%;
-                height: 65%;
+                margin-left: 15%;
+                max-width: 100px;
+                height: auto;
             }
         }
+        
         /* PESQUISAR */
         input {
-            margin-left: 60%;
+            margin-left: 1px;
             width: 100%;
             padding: 10px;
             padding-right: 500px;
@@ -58,8 +60,6 @@ body {
             border: #8C695D 2px solid;
             border-radius: 12px;
             background-color: #F5F5F5;
-            display: flex;
-            align-items: center;
         }        input:focus {
             border: #8C695D 2px solid;
             outline: none;
