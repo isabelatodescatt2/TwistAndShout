@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição</title>
+
+    <link rel="stylesheet" href="ediçao.css">
+    <script src="ediçao.js"></script>
+
+
+</head>
+<body>
+    <!-- NAV bar -->
+    <div class="navBar">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo Twist and Shout">
+        </div>
+        <div class="barraPesquisa">
+                <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
+        </div>
+        <div class="iconesNavBar">
+            <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" id="cartSymbol" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" id="menuSymbol" alt="Menu" onclick="Menu()">
+        </div>
+    </div>
+    
+    <div class="ediçao">
+
+        <h1>EDIÇÃO</h1>
+        <h2>Edite seus produtos</h2>
+
+    </div>
+
+            <div id="produtos">
+                <ul id="listaProdutos"></ul>
+
+            </div>
+</body>
+</html>
