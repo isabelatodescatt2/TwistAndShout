@@ -26,11 +26,13 @@
 body {
     font-family: 'Inter';
     background-color: #E5D5CE;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 .navBar {
     background-color: #F5F5F5;
-    margin-top: -8px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
