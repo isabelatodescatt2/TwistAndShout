@@ -1,33 +1,35 @@
+// Função para realizar o login
 function login() {
-    // Obtém os elementos dos campos do formulário de login usando os IDs atualizados
-    let campoEmailLogin = document.getElementById('email'); // Campo para nome de usuário
-    let campoSenhaLogin = document.getElementById('senha'); // Campo para senha
-    
-
-    // Obtém os valores digitados pelo usuário
-    let emailLogin = campoEmailLogin.value;
-    let senhaLogin = campoSenhaLogin.value;
-
-
-    // Obtém os dados armazenados no Local Storage ou usa um objeto vazio se não houver dados
-    let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados")) || {};
-
-    // Adiciona o novo login ao banco de dados
-    bancoDeDados[emailLogin] = { usuario: emailLogin, password: senhaLogin };
-
-
-    // Verifica se o nome de usuário e a senha correspondem a algum registro no banco de dados
-    if (bancoDeDados[emailLogin] && bancoDeDados[emailLogin].password === senhaLogin) {
-
-        alert("Login bem-sucedido!"); // Exibe mensagem se o login for bem-sucedido
-        // window.location.href = "index.html";  ----  ainda não tem essa página
-
+    let usuario = document.querySelector('#email');
+    let senha = document.querySelector('#senha');
+  
+    let listaUser = JSON.parse(localStorage.getItem('userList')) || [];
+    let userValid = null;
+  
+    listaUser.forEach((item) => {
+      if (usuario.value === item.emailOrPhone && senha.value === item.password) {
+        userValid = item;
+      }
+    });
+  
+    if (userValid) {
+      window.location.href = 'inicio.html';
+  
+      let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2);
+      localStorage.setItem('token', token);
+      localStorage.setItem('userLogado', JSON.stringify(userValid));
     } else {
-
-        alert("Email ou senha incorretos."); // Exibe mensagem se o login falhar
-
+      alert('Usuário ou senha incorretos');
+      usuario.focus();
     }
+  }
+  
+  function VoltarForm() {
+    window.location.href = 'inicio.html';
 }
+
+
+
 
     // Função chamada quando a API é carregada
     function onApiLoad() {

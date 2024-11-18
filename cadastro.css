@@ -69,6 +69,7 @@ body {
     left: 0;
     width: 50px;
     margin: 1%;
+    cursor: pointer;
 }
 label {
     font-size: 15px;
@@ -155,6 +156,9 @@ label {
     margin-left: 310px;
     font-size: 14px;
     justify-content: center;
+    u {
+        cursor: pointer;
+    }
 }
 
 .entrar {

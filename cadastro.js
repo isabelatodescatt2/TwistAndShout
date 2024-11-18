@@ -1,44 +1,83 @@
+let username = document.querySelector('#username');
+let emailOrPhone = document.querySelector('#emailoutelefone');
+let password = document.querySelector('#senha');
+let confirmPassword = document.querySelector('#confirmarsenha');
+let msgError = document.createElement('div');
+let msgSuccess = document.createElement('div');
+document.body.appendChild(msgError);
+document.body.appendChild(msgSuccess);
+
+let validUsername = false;
+let validPassword = false;
+let validConfirmPassword = false;
+
+// Validação do username
+username.addEventListener('keyup', () => {
+  if (username.value.length <= 4) {
+    username.style.borderColor = 'red';
+    validUsername = false;
+  } else {
+    username.style.borderColor = 'green';
+    validUsername = true;
+  }
+});
+
+// Validação da senha
+password.addEventListener('keyup', () => {
+  if (password.value.length <= 5) {
+    password.style.borderColor = 'red';
+    validPassword = false;
+  } else {
+    password.style.borderColor = 'green';
+    validPassword = true;
+  }
+});
+
+// Validação de confirmação da senha
+confirmPassword.addEventListener('keyup', () => {
+  if (password.value !== confirmPassword.value) {
+    confirmPassword.style.borderColor = 'red';
+    validConfirmPassword = false;
+  } else {
+    confirmPassword.style.borderColor = 'green';
+    validConfirmPassword = true;
+  }
+});
+
+// Função de cadastro
 function cadastro() {
-    // Buscas os inputs do cadastro pelo seu ID e armazena os valores digitados pelo usuário nos inputs
-    let usuario = document.getElementById('username').value;
-    let email = document.getElementById('emailoutelefone').value;
-    let senha = document.getElementById('senha').value;
-    let confirmaSenha = document.getElementById('confirmarsenha').value;
+  if (validUsername && validPassword && validConfirmPassword) {
+    let userList = JSON.parse(localStorage.getItem('userList') || '[]');
 
-    // Verifica se a senha e a confirmação de senha são iguais
-    if (senha === confirmaSenha) {
+    userList.push({
+      username: username.value,
+      emailOrPhone: emailOrPhone.value,
+      password: password.value,
+    });
 
-        // Obtém os dados armazenados no Local Storage ou cria um objeto vazio se não houver dados
-        let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados")) || {};
+    localStorage.setItem('userList', JSON.stringify(userList));
 
-        // Verifica se o nome de usuário já está cadastrado
-        if (bancoDeDados[usuario] || bancoDeDados[email]) {
-            alert("usuário ou email já cadastrados.") // Exibe mensagem se o nome de usuário já existir
-            return; // Encerra a função para não cadastrar o usuário
-        } 
+    setTimeout(() => {
+      window.location.href = 'login.html'; // Alterar para o destino desejado
+    }, 3000);
+  } else {
+    alert('Preencha todos os campos corretamente antes de cadastrar');
 
-
-
-        // Adiciona o novo usuário ao banco de dados
-        bancoDeDados[usuario] = { usuario: usuario, password: senha };
-
-        // Salva o banco de dados atualizado no Local Storage
-        localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados));
-
-        alert("Usuário cadastrado com sucesso!"); // Exibe mensagem de sucesso
-    } else {
-        alert("As senhas são diferentes!"); // Exibe mensagem se as senhas não coincidirem
-    }
+  }
 }
 
 
-function VoltarForm(){
-    window.location.href='AQUI É O LINK DA PAGINA PRINCIPAL'
+function AbrirEntrar() {
+    window.location.href = 'login.html';
+}
+
+
+function VoltarForm() {
+    window.location.href = 'inicio.html';
 }
 
 
 const modal = document.getElementById('janelinha-modal')
-// Seleciona o elemento modal pelo ID da minha 'janelinha-modal' e armazena na const 'modal'
 
 // Abre o meu modal
 function abrirModal() {

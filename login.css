@@ -33,6 +33,15 @@ body {
     margin: 0;
 }
 
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    margin: 1%;
+    cursor: pointer;
+}
+
 /* Container Principal */
 .container {
     display: flex;
@@ -96,17 +105,17 @@ a {
     color: white;
     text-decoration: none;
 }
-
+/* 
 /* Responsividade */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
     .esquerda, .direita {
-        width: 100%;
-    }
-}
+        width: 100%; */
+    /* }
+} */ */
 
 button {
     cursor: pointer;

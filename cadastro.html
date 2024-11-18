@@ -39,21 +39,17 @@
                 </label>
                 <input class='espacinho' type="password" id="confirmarsenha" name="confirmarsenha" placeholder="Sua senha" required>
                 <button class="botao" id="Botao" onclick="cadastro()">
-                    <p style="font-family: 'Inter', sans-serif;" class="criarconta">Criar conta</p>
+                    <p style="font-family: 'Inter', sans-serif;" class="criarconta">Criar conta</p> 
                 </button>
                
             </div>
 <br>    
-           <input type="checkbox" id="check" name="check" value="check"> <p style="font-family: 'Inter', sans-serif;" class = 'termos' >     Ao criar esta conta, eu confirmo que li e concordo com os <span class="condicoes" id="modal" >Termos e Condições</span> desta plataforma, 
-                incluindo a política de privacidade e os requisitos de uso. Eu entendo e aceito todos os termos descritos</p>
-
-                <center>
-                    <div class="botaotermos" id="myBotao" onclick="abrirModal()">Termos e condições</div>
-                </center>
+            <p style="font-family: 'Inter', sans-serif;" class = 'termos' >     Ao criar esta conta, eu confirmo que li e concordo com os <span class="condicoes" id="modal" onclick="abrirModal()" >Termos e Condições</span> desta plataforma, 
+                incluindo a política de privacidade e os requisitos de uso. Eu entendo e aceito todos os termos descritos</p>>
 
                 <br>
 
-            <p style="font-family: 'Inter', sans-serif;" class="entrar">Já tem uma conta? <u>Entre</u></p>
+            <p style="font-family: 'Inter', sans-serif;" class="entrar">Já tem uma conta? <u onclick="AbrirEntrar()">Entre</u></p>
     </div>
     
     <div class="janelinha-modal" id="janelinha-modal">

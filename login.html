@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
+    <div class="voltar">
+        <img class="arrow" src="imagens/arrow.png" onclick="VoltarForm()">
+    </div>
+
     <div class="container">
         <!-- Coluna da Esquerda -->
         <div class="primeiraColuna">
@@ -29,12 +34,12 @@
             <div class="inputs">
                 <input 
                 style="font-family: 'Inter', sans-serif;" 
-                class='espacinho' type="email" placeholder="Seu Email"
+                type="email" placeholder="Seu Email"
                 id="email"
                 >
                 <input 
                 style="font-family: 'Inter', sans-serif;" 
-                class='espacinho' type="password" placeholder="Sua Senha"
+                type="password" placeholder="Sua Senha"
                 id="senha"
                 >
             </div>
@@ -50,7 +55,7 @@
             
             
             <button class="botao" id="botao" onclick="login()">Entrar</button>
-            <p class ="criarconta">Não tem uma conta? <a href="#"><u>Crie uma</u></a></p>
+            <p class ="criarconta">Não tem uma conta? <a href="cadastro.html"><u>Crie uma</u></a></p>
         </div>
     </div>
     <script src="login.js"></script>
