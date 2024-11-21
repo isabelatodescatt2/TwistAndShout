@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Molen';
+    src: url("fonts/molen-surplus.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("fonts/Inter-Regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterThin';
+    src: url("fonts/Inter-Thin-BETA.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url("fonts/Inter-Medium.woff") format('woff');
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Inter';
+    background-color: #E5D5CE;
+    height: 100vh;
+    margin: 0;
+}
+
+/*  ocultar a barra de rolagem */
+::-webkit-scrollbar {
+    display: none;
+  }
+
+/* CONTAINERS */
+.navBar {
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+
+    .logo {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        img{
+            margin-left: 60%;
+            max-width: 100px;
+            height: auto;
+            
+        }
+    }
+
+    .barraPesquisa {
+        margin-top: 1.8%;
+        input {
+            width: 1000px;
+            padding: 14px;
+            border: #8C695D 2px solid;
+            border-radius: 13px;
+            background-color: #F5F5F5;
+        }
+        input:focus {
+            border: #8C695D 2px solid;
+            outline: none;
+        }
+        
+        ::placeholder {
+            color: #D6D6D6;
+            padding-left: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'InterThin';
+            letter-spacing: 1px;
+        }   
+    }
+
+    .iconesNavBar {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        align-items: center;
+        cursor: pointer;
+
+        #profileSymbol{
+            margin-left: 25px;
+            max-width: 37px;
+        }
+        #cartSymbol{
+            margin-left: 20px;
+            max-width: 40px;
+        }
+        #menuSymbol{
+            margin-left: 30px;
+            max-width: 10px;
+            margin-right: 35px;
+        }
+
+    }
+
+}
+
+/* NAV BAR 2 */
+.navBar2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #6D2626;
+        p {
+            margin-left: 6%;
+            margin-right: 6%;
+            font-family: 'InterThin';
+            color: #F5F5F5;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;   
+
+            &:hover {
+                text-decoration: underline; 
+            }
+        }   
+}
+
+/* CONTAINER 1 */
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 5%;
+        .estetica {
+            width: 80%;
+        }
+        .logoTaS {
+            width: 70%;
+            pointer-events: none;
+            user-select: none;
+        }
+}
+
+/* CONTAINER 2 */
+.container2 {
+    background-color: #6D2626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin-top: 3%;
+    padding-bottom: 2%;
+    
+    .acentoaboutus {
+        font-family: 'Molen';
+        color: #F5F5F5;
+        font-size: 100px;
+        margin-bottom: -100px;
+        margin-left: 250px;
+        margin-top: 0%;
+        text-shadow: 2px 2px 2px #403535;
+    }
+
+    .aboutustext {
+        font-family: 'InterThin';
+        color: #F5F5F5;
+        font-size: 16px;
+        width: 80%;
+        text-align: center;
+        margin-top: 0;
+        font-weight: bold;
+        letter-spacing: 6%;
+    }
+}
+
+/* CONTAINER 3 */
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.titulo {
+    font-family: 'Molen';
+    color: #F5F5F5;
+    font-size: 100px;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    text-shadow: 2px 2px 2px #403535;
+    text-align: center;
+}

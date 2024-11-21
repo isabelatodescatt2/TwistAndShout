@@ -73,7 +73,7 @@ function AbrirEntrar() {
 
 
 function VoltarForm() {
-    window.location.href = 'inicio.html';
+    window.location.href = 'index.html';
 }
 
 

@@ -13,7 +13,7 @@ function login() {
     });
   
     if (userValid) {
-      window.location.href = 'inicio.html';
+      window.location.href = 'index.html';
   
       let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2);
       localStorage.setItem('token', token);
@@ -25,7 +25,7 @@ function login() {
   }
   
   function VoltarForm() {
-    window.location.href = 'inicio.html';
+    window.location.href = 'index.html';
 }
 
 
