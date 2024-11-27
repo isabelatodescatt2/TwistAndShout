@@ -2,10 +2,6 @@ let username = document.querySelector('#username');
 let emailOrPhone = document.querySelector('#emailoutelefone');
 let password = document.querySelector('#senha');
 let confirmPassword = document.querySelector('#confirmarsenha');
-let msgError = document.createElement('div');
-let msgSuccess = document.createElement('div');
-document.body.appendChild(msgError);
-document.body.appendChild(msgSuccess);
 
 let validUsername = false;
 let validPassword = false;
@@ -25,7 +21,7 @@ password.addEventListener('keyup', () => {
   }
 });
 
-// Validação de confirmação da senha
+// confirmação da senha
 confirmPassword.addEventListener('keyup', () => {
   validConfirmPassword = password.value === confirmPassword.value;
 });
@@ -43,9 +39,10 @@ function cadastro() {
 
     localStorage.setItem('userList', JSON.stringify(userList));
 
-    setTimeout(() => {
+setTimeout(() => {
       window.location.href = 'login.html'; // Alterar para o destino desejado
-    }, 3000);
+    }, 2000);
+    
   } else {
     alert('Preencha todos os campos corretamente antes de cadastrar');
 

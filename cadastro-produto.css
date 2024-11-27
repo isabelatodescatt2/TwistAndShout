@@ -315,18 +315,16 @@ body {
         margin: 0;
         padding: 0;
         list-style-type: none;
-        padding: 0;
-        max-height: 400px; /* Defina a altura máxima conforme necessário */
+        max-height: 400px;
         overflow-y: auto; /* Permite rolagem vertical */
         display: flex;
         flex-direction: column; /* Alinha os itens verticalmente */
-        
     }
 
     #produtos li {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between; /* Espaçamento entre os elementos */
         background-color: #F5F5F5;
         border-radius: 8px;
         padding: 10px;
@@ -334,20 +332,39 @@ body {
         font-size: 14px;
         color: #000;
     }
-
+    
     #produtos li img {
         width: 50px;
         height: 50px;
         object-fit: cover;
         margin-right: 10px;
     }
-
-    #produtos li span {
-        flex: 1;
+    
+    #produtos li .produto-info {
+        display: flex;
+        align-items: center;
+        flex: 1; /* Faz com que o conteúdo ocupe o máximo disponível */
+    }
+    
+    #produtos li .produto-info strong {
         margin-left: 10px;
         font-family: 'Inter';
         font-size: 14px;
         text-align: left;
+    }
+    
+    #produtos li button {
+        background-color: #6D2626; /* Cor vermelha */
+        color: white; 
+        border: none; 
+        padding: 5px 10px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        margin-left: 10px; /* Espaço entre o texto e o botão */
+    }
+    
+    #produtos li button:hover {
+        background-color: #3a1818; /* Cor ao passar o mouse */
     }
 
     #botaoLimpar {
@@ -355,8 +372,8 @@ body {
         height: 45px;
         margin-top: auto;
         margin-bottom: 18px;
+        margin-right: 90%;
         align-self: center;
-        margin-right: 350px;
         padding: 10px;
         background-color: #3a1818;
         color: white;
@@ -365,8 +382,10 @@ body {
         cursor: pointer;
         font-family: 'InterThin';
         font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
     .modal-menu{
         width: 100%;
         height: 100%;
@@ -492,3 +511,19 @@ body {
     .descricao {
         height: 100px;
     }
+
+    .botao-excluir {
+    background-color: #ff4d4d; /* Cor vermelha */
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 10px; /* Espaço entre o texto e o botão */
+}
+
+.botao-excluir:hover {
+    background-color: #ff1a1a; /* Cor ao passar o mouse */
+}
+
+

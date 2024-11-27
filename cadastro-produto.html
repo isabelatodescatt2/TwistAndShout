@@ -12,24 +12,8 @@
     <!-- NAV BAR -->
     <div class="navBar">
         <div class="logo">
-            <img onclick="Inicio()" id ="imagem" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
-            <audio id="audio" src="audio/The Beatles - Twist & Shout - Performed Live On The Ed Sullivan Show 2_23_64.mp3"></audio>
+            <img onclick="Inicio()" id="imagem" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
         </div>
-
-        <!-- twist and shout audio cantoria lalalaal -->
-        <script> 
-            const imagem = document.getElementById('imagem');
-            const audio = document.getElementById('audio');
-    
-            imagem.addEventListener('mouseover', () => {
-                audio.play();
-            });
-    
-            imagem.addEventListener('mouseout', () => {
-                audio.pause(); // Pausa a música, mas não reinicia
-            });
-        </script>
-        
         <div class="barraPesquisa">
             <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
         </div>
@@ -50,17 +34,15 @@
 
     <!-- CONTAINER VERMELHO -->
     <div class="containerGeral">
-        <!-- ESQUERDA -->
         <div class="containerEsquerdo">
             <input type="file" id="uploadImageProduct" accept="image/*" onchange="previewImage(event)" style="display:none;">
             <label for="uploadImageProduct" class="upload">
                 <img id="imagePreview" src="imagens/uploadImage.png" alt="Preview da Imagem" style="max-width: 80%; height: auto;">
                 <p class="imagemTexto">Escolha uma imagem do produto</p>
             </label>
-            <p>Recomenda-se o uso de arquivos de alta qualidade, com resolução de no mínimo 300 dpi e tamanho de 1000 x 1000 pixels.    </p>
+            <p>Recomenda-se o uso de arquivos de alta qualidade, com resolução de no mínimo 300 dpi e tamanho de 1000 x 1000 pixels.</p>
         </div>
 
-        <!-- DIREITA -->
         <div class="containerDireito">
             <br><br>
             <label for="nomeProduto">Nome</label>
@@ -86,9 +68,7 @@
             <label for="descricaoProduto">Descrição</label>
             <input type="text" class="descricao" name="descricaoProduto" id="descricaoProduto" placeholder="Adicione uma descrição do produto" required>
 
-            <button class="enviar" onclick="criarProduto(event)">
-                Enviar
-            </button>
+            <button class="enviar" onclick="criarProduto(event)">Enviar</button>
             
             <br><br>
 
@@ -99,3 +79,7 @@
             </div>              
         </div>
     </div>
+    
+    <script src="cadastro-produto.js"></script>
+</body>
+</html>
