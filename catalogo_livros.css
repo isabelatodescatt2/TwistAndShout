@@ -51,6 +51,7 @@ body {
         display: flex;
         margin-top: auto;
         margin-bottom: auto;
+        cursor: pointer;
         img{
             margin-left: 60%;
             max-width: 100px;

@@ -52,6 +52,7 @@ body {
         display: flex;
         margin-top: auto;
         margin-bottom: auto;
+        cursor: pointer;
         img{
             margin-left: 60%;
             max-width: 100px;
@@ -207,4 +208,12 @@ body {
     margin-bottom: 0%;
     text-shadow: 2px 2px 2px #403535;
     text-align: center;
+}
+
+
+.rodape {
+    background-color: #6D2626;
+    #rodapeImg {
+        width: 70%;
+    }
 }

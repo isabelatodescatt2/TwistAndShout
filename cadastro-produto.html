@@ -12,8 +12,24 @@
     <!-- NAV BAR -->
     <div class="navBar">
         <div class="logo">
-            <img onclick="Inicio()" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+            <img onclick="Inicio()" id ="imagem" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+            <audio id="audio" src="audio/The Beatles - Twist & Shout - Performed Live On The Ed Sullivan Show 2_23_64.mp3"></audio>
         </div>
+
+        <!-- twist and shout audio cantoria lalalaal -->
+        <script> 
+            const imagem = document.getElementById('imagem');
+            const audio = document.getElementById('audio');
+    
+            imagem.addEventListener('mouseover', () => {
+                audio.play();
+            });
+    
+            imagem.addEventListener('mouseout', () => {
+                audio.pause(); // Pausa a música, mas não reinicia
+            });
+        </script>
+        
         <div class="barraPesquisa">
             <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
         </div>

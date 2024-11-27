@@ -6,6 +6,10 @@ function CarrinhoCompras(){
     window.location.href = "carrinho.html";
 }
 
+function Inicio(){
+    window.location.href = "index.html";
+}
+
 function exibirProdutosCategoria() {
     const categoria = "vinil"; // Define a categoria específica
     const produtos = JSON.parse(localStorage.getItem(categoria)) || []; 
