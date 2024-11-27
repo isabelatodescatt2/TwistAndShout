@@ -197,6 +197,23 @@ label {
     border-radius: 20px;
     color: #fff; 
     overflow-x: hidden;
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Molen';
+        }
+
+        p {
+            text-align: left;
+            margin-bottom: 20px;
+            font-family: 'InterThin';
+        }
+
+        li {
+            text-align: left;
+            margin-bottom: 26px;
+            font-family: 'Inter';
+        }
     
 }
 

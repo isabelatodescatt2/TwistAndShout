@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Twist and Shout</title>
+    <link rel="stylesheet" href="carrinhoVazio.css">
+    <script src="carrinhoVazio.js"></script>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <div class="navBar">
+        <div class="logo">
+            <img src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+        </div>
+        <div class="title">
+            <h1>SEU CARRINHO</h1>
+        </div>
+        <div class="iconesNavBar">
+            <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" id="cartSymbol" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" id="menuSymbol" alt="Menu" onclick="Menu()">
+        </div>
+
+    </div>
+
+
+    <!-- Tela de Carrinho VAZIO -->
+    <div class="carrinhoVazio-container">
+
+        <img src="imagens/carrinhovazio.png" alt="">
+        <h1>SEU CARRINHO ESTÁ VAZIO</h1>
+        <p>Adicione algum produto em seu carrinho e comece a comprar!</p>
+
+        <div class="botoes">
+            <button id="btnCadastro" class="cadastro" onclick="Entrar()">CADASTRAR-SE / REGISTRAR</button>
+            <button class="comprar" onclick="VoltarForm()">COMPRE AGORA</button>
+        </div>
+</body>
+</html>
+   

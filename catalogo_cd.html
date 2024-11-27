@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogos</title>
+    <link rel="stylesheet" href="catalogo_cd.css">
+</head>
+<body>
+    <div class="navBar">
+        <div class="logo">
+            <img src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+        </div>
+        <div class="barraPesquisa">
+            <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
+        </div>
+        <div class="iconesNavBar">
+            <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" id="cartSymbol" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" id="menuSymbol" alt="Menu" onclick="Menu()">
+        </div>
+    </div>
+
+    <!-- NAV BAR 2 -->
+    <div class="navBar2">
+        <p onclick="window.location.href='catalogo_vinil.html'">DISCOS DE VINIL</p>
+        <p onclick="window.location.href='catalogo_cd.html'">CD's</p>
+        <p onclick="window.location.href='catalogo_dvd.html'">DVD's</p>
+        <p onclick="window.location.href='catalogo_acessorios.html'">ACESSÓRIOS</p>
+        <p onclick="window.location.href='catalogo_livros.html'">LIVROS</p>
+        <p onclick="window.location.href='catalogo_posters.html'">POSTERS</p>
+    </div>
+
+    <!-- Exibição dos Produtos -->
+    <div id="exibicaoProdutos">
+        <div id="tituloProdutos">
+            <h2>CD's</h2>
+            <p>Onde cada CD conta uma história!</p>
+        </div>
+        <ul id="produtos"></ul> <!-- Elemento onde os produtos serão exibidos -->
+    </div>
+    
+    <script src="catalogo_cd.js"></script>
+</body>

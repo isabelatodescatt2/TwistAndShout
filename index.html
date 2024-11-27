@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist and Shout</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- NAV BAR -->
     <div class="navBar">
         <div class="logo">
-            <img src="imagens/logo.png" alt="Logo Twist and Shout">
+            <img id ="imagem" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+            <audio id="audio" src="audio/The Beatles - Twist & Shout - Performed Live On The Ed Sullivan Show 2_23_64.mp3"></audio>
         </div>
+
+        <!-- twist and shout audio cantoria lalalaal -->
+        <script> 
+            const imagem = document.getElementById('imagem');
+            const audio = document.getElementById('audio');
+    
+            imagem.addEventListener('mouseover', () => {
+                audio.play();
+            });
+    
+            imagem.addEventListener('mouseout', () => {
+                audio.pause(); // Pausa a música, mas não reinicia
+            });
+        </script>
+
         <div class="barraPesquisa">
-                <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
+                <input type="search" id="busca" placeholder="Busque por artistas, produtos, temas, etc...">
+                <i id="buscarBtn" class="fa fa-search"></i>
         </div>
         <div class="iconesNavBar">
             <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
@@ -24,12 +42,12 @@
 
     <!-- NAV BAR 2 -->
     <div class="navBar2">
-        <p>DISCOS DE VINIL</p>
-        <p>CD's</p>
-        <p>DVD's</p>
-        <p>ACESSÓRIOS</p>
-        <p>LIVROS</p>
-        <p>POSTERS </p>
+        <p onclick="window.location.href='catalogo_vinil.html'">DISCOS DE VINIL</p>
+        <p onclick="window.location.href='catalogo_cd.html'">CD's</p>
+        <p onclick="window.location.href='catalogo_dvd.html'">DVD's</p>
+        <p onclick="window.location.href='catalogo_acessorios.html'">ACESSÓRIOS</p>
+        <p onclick="window.location.href='catalogo_livros.html'">LIVROS</p>
+        <p onclick="window.location.href='catalogo_posters.html'">POSTERS</p>
     </div>
 
     <!-- CONTAINER 1 -->

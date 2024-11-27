@@ -35,7 +35,6 @@ body {
     display: none;
   }
 
-/* CONTAINERS */
 .navBar {
     background-color: #F5F5F5;
     display: flex;
@@ -125,6 +124,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #6D2626;
+    margin-bottom: 0%;
         p {
             margin-left: 6%;
             margin-right: 6%;
@@ -140,71 +140,66 @@ body {
         }   
 }
 
-/* CONTAINER 1 */
-.container1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10%;
-    margin-right: 5%;
-    margin-top: 5%;
-        .estetica {
-            width: 80%;
-        }
-        .logoTaS {
-            width: 70%;
-            pointer-events: none;
-            user-select: none;
-        }
-}
-
-/* CONTAINER 2 */
-.container2 {
-    background-color: #6D2626;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 400px;
-    margin-top: 3%;
-    padding-bottom: 2%;
-    
-    .acentoaboutus {
-        font-family: 'Molen';
-        color: #F5F5F5;
-        font-size: 100px;
-        margin-bottom: -100px;
-        margin-left: 250px;
-        margin-top: 0%;
-        text-shadow: 2px 2px 2px #403535;
-    }
-
-    .aboutustext {
-        font-family: 'InterThin';
-        color: #F5F5F5;
-        font-size: 16px;
-        width: 80%;
+#exibicaoProdutos {
+    #tituloProdutos {
         text-align: center;
-        margin-top: 0;
-        font-weight: bold;
-        letter-spacing: 6%;
+        font-size: 26px;
+        color: #ffffff;
+        background-color: #6D2626;
+        height: 100px;
+        font-family: 'Inter';
+        text-transform: uppercase;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-top: -40px;
+        letter-spacing: 2px;
+
+        p {
+            font-family: 'InterThin';
+            font-size: 20px;
+            text-transform: none;
+            margin-top: -30px;
+        }
     }
+    #produtos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
 }
 
-/* CONTAINER 3 */
-.container3 {
+/* PARTE DO PRODUTO */
+#produtos {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.titulo {
-    font-family: 'Molen';
-    color: #F5F5F5;
-    font-size: 100px;
-    margin-top: 3%;
-    margin-bottom: 0%;
-    text-shadow: 2px 2px 2px #403535;
+.produto-card {
+    background-color: #F5F5F5;
+    border: 1px solid #6D2626;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.produto-card:hover {
+    transform: scale(1.05);
+}
+
+.produto-imagem {
+    width: 100%;
+    height: auto;
+}
+
+.produto-info {
+    padding: 10px;
 }

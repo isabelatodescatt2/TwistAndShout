@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="cadastro-produto.js"></script>
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="cadastro-produto.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <div class="navBar">
+        <div class="logo">
+            <img onclick="Inicio()" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+        </div>
+        <div class="barraPesquisa">
+            <input type="search" placeholder="Busque por artistas, produtos, temas, etc...">
+        </div>
+        <div class="iconesNavBar">
+            <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" id="cartSymbol" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" id="menuSymbol" alt="Menu" onclick="Menu()">
+        </div>
+    </div>
+
+    <div class="modal-menu" id="modal-menu">
+        <div class="modal" id="modal">
+            <button class="fechar-modal-menu" id="fechar-modal-menu">X</button>
+            <button class="adm-btn" onclick="Editor()">Mudar para a versão administrador</button>
+            <button class="client-btn" onclick="CLIENT()">Visualizar como cliente</button>
+        </div>
+    </div>
+
+    <!-- CONTAINER VERMELHO -->
+    <div class="containerGeral">
+        <!-- ESQUERDA -->
+        <div class="containerEsquerdo">
+            <input type="file" id="uploadImageProduct" accept="image/*" onchange="previewImage(event)" style="display:none;">
+            <label for="uploadImageProduct" class="upload">
+                <img id="imagePreview" src="imagens/uploadImage.png" alt="Preview da Imagem" style="max-width: 80%; height: auto;">
+                <p class="imagemTexto">Escolha uma imagem do produto</p>
+            </label>
+            <p>Recomenda-se o uso de arquivos de alta qualidade, com resolução de no mínimo 300 dpi e tamanho de 1000 x 1000 pixels.    </p>
+        </div>
+
+        <!-- DIREITA -->
+        <div class="containerDireito">
+            <br><br>
+            <label for="nomeProduto">Nome</label>
+            <input class='infos' type="text" name="nomeProduto" id="nome" placeholder="Adicione um nome" required>
+
+            <label for="preco">Preço</label>
+            <div class="preco-container">
+                <span class="preco-simbolo">R$</span>
+                <input type="number" id="preco" placeholder="0,00" required>
+            </div>
+
+            <label for="categoria">Categoria</label>
+            <select class="select" name="categoria" id="categoria" required>
+                <option value="" disabled selected>Escolha uma categoria</option>
+                <option value="vinil">Disco de Vinil</option>
+                <option value="cd">CD's</option>
+                <option value="dvd">DVD's</option>
+                <option value="acessorios">Acessórios</option>
+                <option value="livros">Livros</option>
+                <option value="posters">Posters</option>
+            </select>
+
+            <label for="descricaoProduto">Descrição</label>
+            <input type="text" class="descricao" name="descricaoProduto" id="descricaoProduto" placeholder="Adicione uma descrição do produto" required>
+
+            <button class="enviar" onclick="criarProduto(event)">
+                Enviar
+            </button>
+            
+            <br><br>
+
+            <div id="exebicaoProdutos">
+                <h2 id="tituloCadastrados">Produtos Cadastrados</h2>
+                <ul id="produtos"></ul> 
+                <button onclick="limparProdutos()" id="botaoLimpar">Limpar lista</button> 
+            </div>              
+        </div>
+    </div>

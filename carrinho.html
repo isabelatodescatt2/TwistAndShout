@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Twist and Shout</title>
+    <link rel="stylesheet" href="carrinho.css">
+    <script src="carrinho.js"></script>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <div class="navBar">
+        <div class="logo">
+            <img onclick="Inicio()" src="imagens/Twist and Shout.png" alt="Logo Twist and Shout">
+        </div>
+        <div class="title">
+            <h1>SEU CARRINHO</h1>
+        </div>
+        <div class="iconesNavBar">
+            <img src="imagens/profileSymbol.png" id="profileSymbol" alt="Entrar" onclick="Entrar()">
+            <img src="imagens/cartSymbol.png" id="cartSymbol" alt="Carrinho" onclick="CarrinhoCompras()">
+            <img src="imagens/menuSymbol.png" id="menuSymbol" alt="Menu" onclick="Menu()">
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="produtos">
+            <ul id="produtos"></ul>
+        </div>
+    
+        <div class="resumo">
+            <div class="resumoProduto">
+                <h2>Resumo do Pedido</h2>
+                <p>Preço estimado: R$ <span id="total"></span></p>
+                <button onclick="finalizarCompra()" id="finalizarCompra">COMPRE AGORA</button>
+            </div>
+
+            <div class="pagamento">
+                <h2>Pagamento</h2>
+                <img src="imagens/pagamento.png" alt="Métodos de Pagamento" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+   

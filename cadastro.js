@@ -11,37 +11,23 @@ let validUsername = false;
 let validPassword = false;
 let validConfirmPassword = false;
 
-// Validação do username
+// Faz com que o username tenha mais de 4 caracteres 
 username.addEventListener('keyup', () => {
-  if (username.value.length <= 4) {
-    username.style.borderColor = 'red';
-    validUsername = false;
-  } else {
-    username.style.borderColor = 'green';
-    validUsername = true;
-  }
+  validUsername = username.value.length > 4;
 });
 
 // Validação da senha
 password.addEventListener('keyup', () => {
   if (password.value.length <= 5) {
-    password.style.borderColor = 'red';
     validPassword = false;
   } else {
-    password.style.borderColor = 'green';
     validPassword = true;
   }
 });
 
 // Validação de confirmação da senha
 confirmPassword.addEventListener('keyup', () => {
-  if (password.value !== confirmPassword.value) {
-    confirmPassword.style.borderColor = 'red';
-    validConfirmPassword = false;
-  } else {
-    confirmPassword.style.borderColor = 'green';
-    validConfirmPassword = true;
-  }
+  validConfirmPassword = password.value === confirmPassword.value;
 });
 
 // Função de cadastro

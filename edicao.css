@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Molen';
+    src: url("fonts/molen-surplus.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("fonts/Inter-Regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterThin';
+    src: url("fonts/Inter-Thin-BETA.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url("fonts/Inter-Medium.woff") format('woff');
+    font-weight: normal;
+}
+
+
+    .navBar {
+        background-color: #F5F5F5;
+        margin-top: -8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 120px;
+        width: 100%;
+
+        img:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+    
+        .logo {
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+            img{
+                margin-left: 60%;
+                max-width: 100px;
+                height: auto;
+                
+            }
+        }
+    
+        .barraPesquisa {
+            margin-top: 1.8%;
+            input {
+                width: 1000px;
+                padding: 14px;
+                border: #8C695D 2px solid;
+                border-radius: 13px;
+                background-color: #F5F5F5;
+            }
+            input:focus {
+                border: #8C695D 2px solid;
+                outline: none;
+            }
+            
+            ::placeholder {
+                color: #D6D6D6;
+                padding-left: 3px;
+                font-size: 14px;
+                font-weight: bold;
+                font-family: 'InterThin';
+                letter-spacing: 1px;
+            }   
+        }
+    
+        .iconesNavBar {
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+            align-items: center;
+    
+            #profileSymbol{
+                margin-left: 25px;
+                max-width: 37px;
+            }
+            #cartSymbol{
+                margin-left: 20px;
+                max-width: 40px;
+            }
+            #menuSymbol{
+                margin-left: 30px;
+                max-width: 10px;
+                margin-right: 35px;
+            }
+    
+        }
+    
+    }
+
+    body {
+        background-color: #E5D5CE; 
+        height: 100vh; 
+        width: 100vw;
+    }
+
+.ediçao{
+
+    display: block;
+    background-color: #6D2626;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    border: #cf856c 2px solid;
+    text-align: center;
+    color: #D6D6D6;
+  
+
+}  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Twist And Shout</title>
+    <link rel="stylesheet" href="loginAdm.css">
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- Coluna da Esquerda -->
+        <div class="primeiraColuna">
+            <p class="entre">ENTRE COMO ADMIN</p>
+            <button class="google" onclick="loginCliente()">
+                <img src="imagens/Twist and Shout.png" alt="Disco">
+                <span>Entrar como cliente</span>
+            </button>
+
+            <div id="my-signin2"></div>
+
+            <p class="or">― OU ENTRE COMO ADMINISTRADOR ―</p>
+     
+
+            <div class="inputs">
+                <input class='espacinho' type="email" placeholder="Seu usuário" id="usuario">
+                <input class='espacinho' type="password" placeholder="Sua senha" id="senha">    
+            </div>
+
+            <button class="botao" id="botao" onclick="loginAdm()">Entrar</button>
+    
+        </div>
+
+
+        <!-- Coluna da Direita -->
+        <div class="segundaColuna">
+            <img src="imagens/disco.png" alt="disco">
+        </div>
+    </div>
+</body>
+    <script src="loginAdm.js"></script>
+</html>

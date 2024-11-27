@@ -22,26 +22,18 @@
         <!-- Coluna da Direita -->
         <div class="segundaColuna">
             <p class="loginTexto">LOGIN</p>
-            <!-- <button class="google">
-                <img src="imagens/google.png" alt="Google" style="width: 20px; vertical-align: middle;">
-                <span>Entrar com Google</span>
-            </button> -->
+            <button class="google" onclick="loginAdmin()">
+                <img src="imagens/disco.png" alt="Disco">
+                <span>Entrar como Admin</span>
+            </button>
 
             <div id="my-signin2"></div>
 
-            <p class="or">― OU ENTRE COM EMAIL ―</p>
+            <p class="or">― OU ENTRE COMO CLIENTE ―</p>
             
             <div class="inputs">
-                <input 
-                style="font-family: 'Inter', sans-serif;" 
-                type="email" placeholder="Seu Email"
-                id="email"
-                >
-                <input 
-                style="font-family: 'Inter', sans-serif;" 
-                type="password" placeholder="Sua Senha"
-                id="senha"
-                >
+                <input type="email" placeholder="Seu Email" id="email">
+                <input type="password" placeholder="Sua Senha" id="senha">
             </div>
             
             <div class="ajustarSpace">
@@ -59,7 +51,6 @@
         </div>
     </div>
     <script src="login.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer onload="onApiLoad()"></script>
 
 </body>
 </html>

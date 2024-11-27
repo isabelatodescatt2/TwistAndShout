@@ -52,6 +52,7 @@ body {
         display: flex;
         margin-top: auto;
         margin-bottom: auto;
+        cursor: pointer;
         img{
             margin-left: 60%;
             max-width: 100px;
@@ -60,39 +61,12 @@ body {
         }
     }
 
-    .barraPesquisa {
-        margin-top: 1.8%;
-        position: relative;
-    }
-    
-    .barraPesquisa input {
-        width: 1000px;
-        padding: 14px 40px 14px 50px; /* Espaço para o ícone de pesquisa*/
-        border: #8C695D 2px solid;
-        border-radius: 13px;
-        background-color: #F5F5F5;
-    }
-    
-    .barraPesquisa input:focus {
-        border: #8C695D 2px solid;
-        outline: none;
-    }
-    
-    .barraPesquisa ::placeholder {
-        color: #D6D6D6;
-        padding-left: 3px;
-        font-size: 14px;
-        font-weight: bold;
-        font-family: 'InterThin';
-        letter-spacing: 1px;
-    }
-    
-    .barraPesquisa i {
-        position: absolute;
-        left: 96.5%; 
-        top: 20%;
+    h1{
+        font-family: 'Molen';
+        font-size: 60px;
+        margin-top: 15px;
+        margin-left: 95px;
         color: #8C695D;
-        cursor: pointer;
     }
 
     .iconesNavBar {
@@ -131,7 +105,6 @@ body {
             font-family: 'InterThin';
             color: #F5F5F5;
             font-size: 16px;
-            font-weight: bold;
             cursor: pointer;   
 
             &:hover {
@@ -139,72 +112,110 @@ body {
             }
         }   
 }
-
-/* CONTAINER 1 */
-.container1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10%;
-    margin-right: 5%;
-    margin-top: 5%;
-        .estetica {
-            width: 80%;
-        }
-        .logoTaS {
-            width: 70%;
-            pointer-events: none;
-            user-select: none;
-        }
+/* CONTAINER PRINCIPAL */
+.container {
+    display: flex; 
+    max-width: 95%;
+    margin: auto;
+    background: #E5D5CE;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-/* CONTAINER 2 */
-.container2 {
-    background-color: #6D2626;
+.produtos {
+    flex: 2; /* Proporção para a coluna de produtos */
+    margin-right: 150px; /* Espaçamento à direita */
+}
+
+.resumoProduto {
+    flex: 1; /* Proporção para a coluna de resumo e pagamento */
+    background-color: #F9F9F9; /* Fundo suave para destaque */
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.produto-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    background: #F9F9F9;
+}
+
+.produto-imagem {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.produto-info {
+    flex-grow: 1;
+}
+
+.preco {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+}
+
+.quantidade p {
+    margin: 0 10px;
+}
+
+/* RESUMO DO PRODUTO */
+.resumoProduto h2 {
+    margin-top: 0;
+}
+
+.resumoProduto p {
+    font-size: 18px;
+}
+
+button {
+    background-color: #362222;
+    color: white;
+    font-family: 'Inter';
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #291a1a;
+}
+
+
+.resumo {
+    max-width: 25%;
+    margin-top: 0.95%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 400px;
-    margin-top: 3%;
-    padding-bottom: 2%;
-    
-    .acentoaboutus {
-        font-family: 'Molen';
-        color: #F5F5F5;
-        font-size: 100px;
-        margin-bottom: -100px;
-        margin-left: 250px;
-        margin-top: 0%;
-        text-shadow: 2px 2px 2px #403535;
-    }
-
-    .aboutustext {
-        font-family: 'InterThin';
-        color: #F5F5F5;
-        font-size: 16px;
-        width: 80%;
-        text-align: center;
-        margin-top: 0;
-        font-weight: bold;
-        letter-spacing: 6%;
-    }
 }
-
-/* CONTAINER 3 */
-.container3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.titulo {
-    font-family: 'Molen';
-    color: #F5F5F5;
-    font-size: 100px;
-    margin-top: 3%;
-    margin-bottom: 0%;
-    text-shadow: 2px 2px 2px #403535;
+/* PAGAMENTO */
+.pagamento {
+    margin-top: 60px;
     text-align: center;
+    background-color: #F9F9F9;
+    padding-bottom: 30px;
+}
+
+.pagamento img {
+    max-width: 50%; /* Responsivo */
+    height: auto;
 }
