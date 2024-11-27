@@ -511,19 +511,70 @@ body {
     .descricao {
         height: 100px;
     }
+    
+    .produto-card {
+        display: flex;
+        align-items: flex-start; /* Alinha os itens no início */
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 40px;
+        overflow: hidden; /* Oculta a barra de scrollagem */
 
-    .botao-excluir {
-    background-color: #ff4d4d; /* Cor vermelha */
-    color: white; 
-    border: none; 
-    padding: 5px 10px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    margin-left: 10px; /* Espaço entre o texto e o botão */
-}
+    }
+    
+    .produto-imagem {
+        width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: auto;
+        border-radius: 4px;
+        margin-right: 16px;
+    }
+    
+    .produto-info {
+        flex-grow: 1;
+    }
+    
+    .produto-info h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .produto-info p {
+        font-size: small;
+        position: relative;
+        top: 15px;
+        left: -30px;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: flex-end; /* Alinha os botões à direita */
+        margin-top: 8px;
+    }
+    
+    .btn-excluir, .btn-editar {
+        border: none;
+        border-radius: 4px;
+        height: 20px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-.botao-excluir:hover {
-    background-color: #ff1a1a; /* Cor ao passar o mouse */
-}
+    .btn-excluir {
+        margin-bottom: 100%;
 
+    }
+    
+    .btn-editar {
+        margin-bottom: 100%;
+        
+    }
 

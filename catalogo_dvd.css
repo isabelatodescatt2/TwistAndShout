@@ -52,7 +52,6 @@ body {
         margin-top: auto;
         margin-bottom: auto;
         img{
-            cursor: pointer;
             margin-left: 60%;
             max-width: 100px;
             height: auto;
@@ -185,6 +184,7 @@ body {
     border: 1px solid #6D2626;
     border-radius: 8px;
     padding: 20px;
+    height: 80%;
     margin: 10px;
     width: 200px;
     text-align: center;
@@ -203,4 +203,13 @@ body {
 
 .produto-info {
     padding: 10px;
+}
+
+.btn-adicionar {
+    width: 15%;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    left: 60%;
+    transform: translate(-50%, -50%);
 }

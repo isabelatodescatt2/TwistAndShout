@@ -1,48 +1,47 @@
 // funções da navbar
-function Entrar(){
+function Entrar() {
     window.location.href = "login.html";
 }
-function CarrinhoCompras(){
+
+function CarrinhoCompras() {
     window.location.href = "carrinho.html";
 }
 
-function Inicio(){
-    window.location.href = "index.html";
-}
-
-function exibirProdutosCategoria() {
-    const categoria = "vinil"; // Define a categoria específica
-    const produtos = JSON.parse(localStorage.getItem(categoria)) || []; 
-    const lista = document.getElementById('produtos');
-    lista.innerHTML = '';  
-
-    produtos.forEach(produto => { 
-        const li = document.createElement('li'); 
-        li.className = 'produto-card'; // Classe para estilização
-        li.innerHTML = `
-            <img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem">
-            <div class="produto-info">
-                <h3>${produto.nome}</h3>
-                <p>Preço: R$${produto.preco}</p>
-            </div>`;
-
-            li.onclick = () => adicionarAoCarrinho(produto);
-
-        lista.appendChild(li); 
-    });
-}
-
-// Chame a função ao carregar a página
-window.onload = exibirProdutosCategoria;
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Página carregada, exibindo produtos da categoria...');
+    exibirProdutosCategoria();
+});
 
 function adicionarAoCarrinho(produto) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-    // Adiciona o produto ao carrinho
     carrinho.push(produto);
-
-    // Salva o carrinho de volta no localStorage
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    alert('Produto adicionado ao carrinho!');
+}
 
-    alert(`${produto.nome} foi adicionado ao carrinho!`);
+function exibirProdutosCategoria() {
+    const categoria = "vinil"; 
+    const produtos = JSON.parse(localStorage.getItem('produtos')) || []; 
+    const lista = document.getElementById('produtos');
+    lista.innerHTML = '';  
+
+    const produtosFiltrados = produtos.filter(produto => produto.categoria === categoria);
+
+    if (produtosFiltrados.length > 0) {
+        produtosFiltrados.forEach(produto => { 
+            const precoFormatado = parseFloat(produto.preco).toFixed(2);
+            const li = document.createElement('li'); 
+            li.className = 'produto-card';
+            li.innerHTML = `
+                <img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem">
+                <div class="produto-info">
+                    <h3>${produto.nome}</h3>
+                    <p>Preço: R$${precoFormatado}</p>
+                    <img src="imagens/adicionarCart.png" class="btn-adicionar" onclick='adicionarAoCarrinho(${JSON.stringify(produto)})'>
+                </div>`;
+            lista.appendChild(li); 
+        });
+    } else {
+        lista.innerHTML = '<p>Nenhum produto encontrado nesta categoria.</p>';
+    }
 }
